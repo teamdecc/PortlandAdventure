@@ -8,5 +8,9 @@ const localCred = document.getElementById('local-cred');
 const user = api.getPortlander();
 console.log('user');
 
+name.textContent = user.name;
 avatar.src = '/assets/' + user.portlander + '.svg';
+wellBeing.textContent = 'Well Being: ' + user.wellBeing;
+localCred.textContent = 'Local Cred: ' + user.localCred;
+
 console.log(user.portlander);
