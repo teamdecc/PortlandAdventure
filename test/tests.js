@@ -1,3 +1,4 @@
+import makePortlander from '../src/home/make-portlander.js';
 const test = QUnit.test;
 
 test('time to test a function', function(assert) {
@@ -21,13 +22,3 @@ test('time to test a function', function(assert) {
     //Assert
     assert.deepEqual(portlander, expected);
 });
-
-function makePortlander(formData) {
-    const portlander = {
-        name: formData.get('name'),
-        portlander: formData.get('portlander'),
-        wellBeing: '100',
-        localCred: '0'
-    };
-    return portlander;
-}
