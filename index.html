@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Portland People Quest</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Portland People Quest</h1>
+    </header>
+    <main>
+        <h2>Are you ready to start your Portland adventure?</h2>
+        <form>
+            <p>
+                <label for="name">Enter your name:</label>
+                <input id="name" name="name" required>
+            </p>
+            <fieldset>
+                <legend>Choose your adventurer!</legend>
+                <p id="avatars">
+                    <label for="">
+                        <input type="radio" name="portlander" required value="student">
+                        <img src="./assests/001-school.svg" alt="">
+                        Student
+                    </label>
+                    <label for="">
+                        <input type="radio" name="portlander" required value="environmentalist">
+                        <img src="./assests/002-tree.svg" alt="">
+                        Environmentalist
+                    </label>
+                    <label for="">
+                        <input type="radio" name="portlander" required value="hiker">
+                        <img src="./assests/003-cave.svg" alt="">
+                        Hiker
+                    </label>
+                    <label for="">
+                        <input type="radio" name="portlander" required value="cannabis">
+                        <img src="./assests/004-marijuana.svg" alt="">
+                        Cannabis Enthusiast
+                    </label>
+                </p>
+            </fieldset>
+            <button>Start your Adventure!</button>
+        </form>
+    </main>
 </body>
 </html>
