@@ -21,7 +21,7 @@ main a {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 80px 0;
     width: 30%;
     border: 1px solid;
     background-color: rgba(255, 255, 255, 0.863);
@@ -36,13 +36,3 @@ main {
     align-items: center;
 }
 
-.profile {
-    border: 1px solid black;
-    height: 50px;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.863);
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px black;
-    display: flex;
-    justify-content: space-around;
-}
