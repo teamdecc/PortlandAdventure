@@ -6,7 +6,11 @@ img {
 
 body {
     text-align: center;
-    background: url('../assets/pdx_background_2.jpeg');
+    background: url('../assets/pdx.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-color: white;
     background-size: cover;
 }
 
