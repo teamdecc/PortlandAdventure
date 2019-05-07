@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/home/index.css">
+    <title>Portland People Quest</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Portland People Quest</h1>
+    </header>
+    <main>
+        <h2>Are you ready to start your Portland adventure?</h2>
+        <form id="portlander-sign-up">
+            <p>
+                <label for="name">Enter your name:</label>
+                <input id="name" name="name" required>
+            </p>
+            <fieldset>
+                <legend>Choose your adventurer!</legend>
+                <p id="avatar">
+                    <label>
+                        <input type="radio" name="portlander" required value="student">
+                        Student
+                        <img src="./assets/student.svg" alt="">
+                    </label>
+                    <label>
+                        <input type="radio" name="portlander" required value="environmentalist">
+                        Environmentalist
+                        <img src="./assets/environmentalist.svg" alt="">
+                    </label>
+                    <label>
+                        <input type="radio" name="portlander" required value="hiker">
+                        Hiker
+                        <img src="./assets/hiker.svg" alt="">
+                    </label>
+                    <label>
+                        <input type="radio" name="portlander" required value="cannabis">
+                        Cannabis Enthusiast
+                        <img src="./assets/cannabis.svg" alt="">
+                    </label>
+                </p>
+            </fieldset>
+            <button>Start your Adventure!</button>
+        </form>
+    </main>
+    <script type="module" src="./src/home/index.js"></script>
 </body>
 </html>
