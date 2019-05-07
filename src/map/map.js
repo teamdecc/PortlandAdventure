@@ -1,4 +1,6 @@
 import api from '../services/api.js';
+import createCompletedQuest from '../map/create-completed-quest.js';
+import createQuestLink from '../map/create-quest-link.js';
 
 const avatar = document.getElementById('avatar');
 const name = document.getElementById('name');
