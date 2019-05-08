@@ -6,7 +6,7 @@ const api = {
     storage: localStorage,
 
     //Converts object to stringified JSON and stores it
-    signUp(portlander) {
+    saveUser(portlander) {
         const json = JSON.stringify(portlander);
         api.storage.setItem('portlander', json);
     },
