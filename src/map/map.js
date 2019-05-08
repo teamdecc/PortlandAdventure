@@ -1,16 +1,16 @@
 import api from '../services/api.js';
+import createQuestLink from '../map/create-quest-link.js';
+import makeProfile from '../make-profile.js';
+makeProfile();
 
-const avatar = document.getElementById('avatar');
-const name = document.getElementById('name');
-const wellBeing = document.getElementById('well-being');
-const localCred = document.getElementById('local-cred');
+const questList = document.getElementById('quest-list');
 
-const user = api.getPortlander();
-console.log('user');
+const quests = api.getQuests();
 
-name.textContent = user.name;
-avatar.src = '/assets/' + user.portlander + '.svg';
-wellBeing.textContent = 'Well Being: ' + user.wellBeing;
-localCred.textContent = 'Local Cred: ' + user.localCred;
+for(let i = 0; i < quests.length; i++){
+    const quest = quests[i];
+    const link = createQuestLink(quest);
 
-console.log(user.portlander);
+    questList.appendChild(link);
+    
+}

@@ -1,9 +1,12 @@
+import quests from './quest-data.js';
+import getById from '../getById.js';
+
 const api = {
     // Sets storage of where we will be putting the object
     storage: localStorage,
 
     //Converts object to stringified JSON and stores it
-    signUp(portlander) {
+    saveUser(portlander) {
         const json = JSON.stringify(portlander);
         api.storage.setItem('portlander', json);
     },
@@ -13,6 +16,12 @@ const api = {
         const json = api.storage.getItem('portlander');
         const portlander = JSON.parse(json);
         return portlander;
+    },
+    getQuests() {
+        return quests;
+    },
+    getQuest(id) {
+        return getById(quests, id);
     }
 };
 

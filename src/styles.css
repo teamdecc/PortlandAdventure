@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Modak');
 
-img {
-    width: 75px;
+#avatar {
+    width: 40px;
 }
 
 body {
     text-align: center;
-    background: url('../assets/pdx_background_2.jpeg');
+    background: url('../assets/pdx.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-color: white;
     background-size: cover;
 }
 
@@ -15,4 +19,31 @@ h1 {
     font-size: 55pt;
     font-weight: lighter;
     color: rgb(177, 154, 125);
+}
+
+.profile {
+    border: 1px solid black;
+    height: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px black;
+}
+
+.hidden {
+    display: none;
 }

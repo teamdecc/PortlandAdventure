@@ -1,0 +1,11 @@
+#image {
+    margin-top: 60px;
+    width: 90% auto;
+    border: 1px solid;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+}
+
+fieldset {
+    background-color: white;
+}
