@@ -1,4 +1,3 @@
-import api from '../src/services/api.js';
 import scoreChoice from '../src/quests/score-choice.js';
 
 const test = QUnit.test;
