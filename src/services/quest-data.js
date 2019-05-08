@@ -86,4 +86,6 @@ const sauvie = {
         WB: -20
     }]
 };
+
 const quests = [foodCart, gorge, sauvie];
+export default quests;

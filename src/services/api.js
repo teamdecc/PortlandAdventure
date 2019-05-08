@@ -1,3 +1,5 @@
+import quests from './quest-data.js';
+
 const api = {
     // Sets storage of where we will be putting the object
     storage: localStorage,
@@ -13,6 +15,9 @@ const api = {
         const json = api.storage.getItem('portlander');
         const portlander = JSON.parse(json);
         return portlander;
+    },
+    getQuests() {
+        return quests;
     }
 };
 
