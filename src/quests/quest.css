@@ -1,7 +1,3 @@
-body {
-    
-}
-
 #image {
     margin-top: 60px;
     width: 90% auto;
@@ -10,3 +6,6 @@ body {
     box-shadow: 0px 0px 10px black;
 }
 
+fieldset {
+    background-color: white;
+}

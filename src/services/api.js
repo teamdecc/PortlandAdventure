@@ -21,7 +21,7 @@ const api = {
         return quests;
     },
     getQuest(id) {
-        return findById(quests, id);
+        return getById(quests, id);
     }
 };
 

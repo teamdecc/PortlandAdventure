@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Food Truck Adventure</h1>
+        <h1 id="quest-title">Food Truck Adventure</h1>
         <div class="profile">
             <img id="avatar">
             <span id="name"></span>
@@ -19,15 +19,12 @@
         </div>
     </header>
     <main>
-        <img id="image" src="./assets/carts.jpg" alt="Food truck adventure photo">
-        <p id='quest-description'>You hear about a famous food cart pod!</p>
-        <fieldset id="quest-choices">
-            <legend>What do you order?</legend>
-            <label>
-                <input type="radio" name="choice">You order 
-            </label>
-        </fieldset>
-
+        <img id="image">
+        <p class="box" id='quest-description'></p>
+        <form id="quest-form">
+            <fieldset class="box" id="quest-choices"></fieldset>
+            <button>Submit</button>
+        </form>
     </main>
     <script type="module" src="./src/quests/quest.js"></script>
 </body>
