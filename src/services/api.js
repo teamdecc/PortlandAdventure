@@ -1,4 +1,5 @@
 import quests from './quest-data.js';
+import getById from '../getById.js';
 
 const api = {
     // Sets storage of where we will be putting the object
@@ -18,6 +19,9 @@ const api = {
     },
     getQuests() {
         return quests;
+    },
+    getQuest(id) {
+        return findById(quests, id);
     }
 };
 

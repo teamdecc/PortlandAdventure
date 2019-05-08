@@ -1,4 +1,5 @@
 import api from '../src/services/api.js';
+import createChoiceHtml from '../src/quests/create-choice.js';
 const test = QUnit.test;
 
 test('returns DOM html for each choice in quest', assert => {
@@ -14,25 +15,5 @@ test('returns DOM html for each choice in quest', assert => {
     const result = createChoiceHtml(choice);
 
     //assert
-    assert.equal(result, expected);
+    assert.equal(result.outerHTML, expected);
 });
-
-function createChoiceHtml(choice) {
-    const div = document.createElement('div');
-    const label = document.createElement('label');
-    const input = document.createElement('input');
-
-    label.textContent = choice.description;
-    label.setAttribute('for', choice.id);
-
-    input.type = 'radio';
-    input.classList.add('choice');
-    input.name = 'choice';
-    input.id = choice.id;
-    input.value = choice.id;
-    input.textContent = choice.description;
-
-    div.appendChild(label);
-    div.appendChild(input);
-    return div.outerHTML;
-}
