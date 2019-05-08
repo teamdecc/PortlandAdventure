@@ -1,15 +1,30 @@
 import api from '../services/api.js';
+import makeProfile from '../make-profile.js';
+import getById from '../getById.js';
+import createChoiceHtml from './create-choice.js';
 
+makeProfile();
 
-const avatar = document.getElementById('avatar');
-const name = document.getElementById('name');
-const wellBeing = document.getElementById('well-being');
-const localCred = document.getElementById('local-cred');
+const searchParams = new URLSearchParams(window.location.search);
+const questId = searchParams.get('id');
+const quest = api.getQuest(questId);
 
-const user = api.getPortlander();
-console.log('user');
+if(!quest) {
+    window.location = 'map.html';
+}
 
-name.textContent = user.name;
-avatar.src = '/assets/' + user.portlander + '.svg';
-wellBeing.textContent = 'Well Being: ' + user.wellBeing;
-localCred.textContent = 'Local Cred: ' + user.localCred;
+const questTitle = document.getElementById('quest-title');
+const questImage = document.getElementById('image');
+const questDescription = document.getElementById('quest-description');
+const questForm = document.getElementById('quest-form');
+const questChoices = document.getElementById('quest-choices');
+
+questTitle.textContent = quest.title;
+questImage.src = '../assets/' + quest.id + '.jpg';
+questDescription.textContent = quest.description;
+
+for(let i = 0; i < quest.choices.length; i++) {
+    const choice = quest.choices[i];
+    const choiceHtml = createChoiceHtml(choice);
+    questChoices.appendChild(choiceHtml);
+};
