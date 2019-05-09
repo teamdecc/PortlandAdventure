@@ -1,7 +1,7 @@
 import scoreWellBeing from '../src/end/score-well-being.js';
 const test = QUnit.test;
 
-QUnit.module('score wellbeing')
+QUnit.module('score wellbeing');
 
 test('returns dead for wellbeing score <= 0', assert => {
     //arrange
