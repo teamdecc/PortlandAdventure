@@ -60,7 +60,7 @@ const gorge = {
 
 const sauvie = {
     id: 'sauvie',
-    title: 'Sauvie Island Adventure',
+    title: 'Sauvie Island Adventure!',
     image: 'sauvie.jpeg',
     description: 'You hear this island is delightful, so you head on over. There are a variety of things you can go experience, what do you choose to do?',
     choices: [{
