@@ -13,8 +13,6 @@ test('return true if user completed all quests', assert => {
             sauvie: true
         }
     };
-    const expected = true;
-
 
     // act
     const hasCompleted = hasCompletedAllQuests(quests, user);
@@ -32,7 +30,6 @@ test('return false if user has not completed all quests', assert => {
             gorge: true,
         }
     };
-    const expected = false;
 
     // act
     const hasCompleted = hasCompletedAllQuests(quests, user);
