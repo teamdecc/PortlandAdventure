@@ -21,6 +21,7 @@ const questDescription = document.getElementById('quest-description');
 const questForm = document.getElementById('quest-form');
 const questChoices = document.getElementById('quest-choices');
 const result = document.getElementById('result');
+const submitButton = document.getElementById('submit-button');
 
 questTitle.textContent = quest.title;
 questImage.src = '../assets/' + quest.id + '.jpg';
@@ -48,4 +49,5 @@ questForm.addEventListener('submit', event => {
 
     questChoices.classList.add('hidden');
     result.classList.remove('hidden');
+    submitButton.classList.add('hidden');
 });
