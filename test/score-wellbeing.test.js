@@ -1,3 +1,4 @@
+import scoreWellBeing from '../src/end/score-well-being.js';
 const test = QUnit.test;
 
 QUnit.module('score wellbeing')
@@ -37,13 +38,3 @@ test('returns healthy for wellbeing score > 50', assert => {
     //assert
     assert.equal(result, expected);
 });
-
-function scoreWellBeing(user) {
-    if(user.wellBeing <= 0 ) {
-        return 'dead';
-    } else if(user.wellBeing < 50) {
-        return 'sick';
-    } else {
-        return 'healthy';
-    }
-}
