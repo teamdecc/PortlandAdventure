@@ -1,3 +1,4 @@
+import scorelocalCred from '../src/end/score-local-cred.js';
 const test = QUnit.test;
 
 QUnit.module('score localCred');
@@ -38,14 +39,3 @@ test('returns rich for localCred score > 50', assert => {
     assert.equal(result, expected);
 });
 
-function scorelocalCred(user) {
-    if(user.localCred <= 0) {
-        return 'broke';
-    } else if(user.localCred < 50) {
-        return 'poor';
-    } else {
-        return 'rich';
-    }
-}
-
-export default scorelocalCred;
