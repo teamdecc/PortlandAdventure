@@ -1,16 +1,27 @@
 import api from '../services/api.js';
+import makeProfile from '../make-profile.js';
+import createQuestLink from '../map/create-quest-link.js';
+import createCompletedQuest from './create-completed-quest.js';
+import hasCompletedAllQuests from '../map/has-completed-all-quests.js';
+import isDead from '../map/is-dead.js';
 
-const avatar = document.getElementById('avatar');
-const name = document.getElementById('name');
-const wellBeing = document.getElementById('well-being');
-const localCred = document.getElementById('local-cred');
-
+makeProfile();
+const quests = api.getQuests();
 const user = api.getPortlander();
-console.log('user');
 
-name.textContent = user.name;
-avatar.src = '/assets/' + user.portlander + '.svg';
-wellBeing.textContent = 'Well Being: ' + user.wellBeing;
-localCred.textContent = 'Local Cred: ' + user.localCred;
+if(isDead(user) || hasCompletedAllQuests(quests, user)) {
+    window.location = 'end.html';
+}
+const questList = document.getElementById('quest-list');
 
-console.log(user.portlander);
+for(let i = 0; i < quests.length; i++){
+    const quest = quests[i];
+    let link = null;
+
+    if(user.completed[quest.id]) {
+        link = createCompletedQuest(quest);
+    } else {
+        link = createQuestLink(quest);
+    }
+    questList.appendChild(link);
+}

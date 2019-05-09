@@ -7,7 +7,7 @@ portlanderForm.addEventListener('submit', event => {
 
     const formData = new FormData(portlanderForm);
     const portlander = makePortlander(formData);
-    api.signUp(portlander);
+    api.saveUser(portlander);
 
     window.location = 'map.html';
 });

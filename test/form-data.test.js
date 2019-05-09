@@ -13,8 +13,9 @@ test('return an object based off of formData', function(assert) {
     const expected = {
         name: 'claire',
         portlander: 'hiker',
-        wellBeing: '100',
-        localCred: '0'
+        wellBeing: 100,
+        localCred: 0,
+        completed: {}
     };
 
     // Act
