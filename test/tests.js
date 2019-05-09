@@ -8,3 +8,4 @@ import './score-choice.test.js';
 import './has-completed-all-quests.test.js';
 import './is-dead.test.js';
 import './score-wellbeing.test.js';
+import './score-local-cred.test.js';
