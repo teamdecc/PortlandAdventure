@@ -1,3 +1,4 @@
+import isDead from '../src/map/is-dead.js';
 const test = QUnit.test;
 
 QUnit.module('is dead test');
@@ -28,9 +29,3 @@ test('score user as not dead if wellbeing > 0', assert => {
     assert.equal(result, false);
 });
 
-function isDead(user) {
-    if(user.wellBeing <= 0) {
-        return true;
-    }
-    return false;
-}
